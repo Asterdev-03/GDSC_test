@@ -1,0 +1,291 @@
+* {
+  /* outline: 1px solid rgb(255, 53, 53) !important; */
+}
+
+body {
+  background-color: #131316;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0);
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 24px;
+}
+
+button {
+  height: 42px;
+  padding: 10px;
+  background-color: coral;
+  border-color: brown;
+  margin-top: 20px;
+}
+
+.heading,
+.events,
+.work,
+.register,
+.schedules,
+.footer {
+  display: grid;
+  justify-items: center;
+  margin: 0px;
+  padding: 40px;
+}
+
+.title {
+  min-height: 400px;
+  min-width: 80vw;
+}
+
+.heading .gradient {
+  color: aqua;
+  display: grid;
+  justify-items: center;
+  margin-top: 50px;
+
+  font-size: 100px;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    45deg,
+    aqua,
+    blue,
+    magenta,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background-size: 400% 400%;
+
+  animation: animate 8s ease infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.heading .side {
+  display: grid;
+  justify-content: right;
+  font-size: 20px;
+}
+
+.side p {
+  margin-top: 0.5px;
+}
+
+.event {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  margin: 50px 50px;
+  min-height: 50vh;
+  max-width: 50vw;
+  padding: 0px 40px;
+  background-color: #fff;
+  color: #131316;
+  border: dodgerblue solid 5px;
+  border-radius: 20px;
+}
+
+.event img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px;
+}
+
+.wrapper .card {
+  min-height: 200px;
+  margin: 20px 70px;
+  padding: 30px 20px;
+  background-color: #fff;
+  color: #131316;
+  display: grid;
+  justify-items: center;
+  border: dodgerblue solid 5px;
+  border-radius: 20px;
+}
+
+.card h3 {
+  margin-bottom: 0;
+}
+
+.card p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.work h2 {
+  margin-bottom: 20px;
+}
+
+.work small {
+  margin-bottom: 40px;
+}
+
+.schedules {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.timeline {
+  position: relative;
+  color: #131316;
+  max-width: 70vw;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 10px 50px;
+  position: relative;
+  min-width: 300px;
+  width: 50%;
+}
+
+.text-box {
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+}
+
+.text-box h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.text-box small {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.text-box p {
+  font-size: 15px;
+}
+
+.left-container {
+  left: -11%;
+}
+
+.right-container {
+  left: 50%;
+}
+
+.container img {
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+}
+
+.right-container img {
+  left: -20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+}
+
+.left-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -14px;
+}
+
+.right-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -1px;
+}
+
+footer {
+  background-color: black;
+  color: #fff;
+  height: 30px;
+  display: grid;
+  justify-content: center;
+  margin: 0;
+  padding: 50px;
+}
